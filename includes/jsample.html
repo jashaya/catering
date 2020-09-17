@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+ function multiplyNumbers(){
+	 var fnum=document.getElementById("ftext");
+	 document.write(fnum);
+	 var snum=document.getElementById("stext");
+	 var c=fnum*snum;
+	 document.write(c);
+</script>
+</head>
+
+<body>
+<form name="form1" id="form1">
+first number:<input type="text" id="ftext">
+second number:<input type="text" id="stext"><br>
+<input type="button" value="multiply" name="multiply" onclick="document.write(c)">
+<input type="button" value="division" name="divide">
+
+<div>
+<p>
+<input type="text" id="rtext"></p>
+</div>
+</form>
+</body>
+</html>

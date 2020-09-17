@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+body,td,th {
+	color:#000
+}
+</style>
+<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationPassword.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationConfirm.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationPassword.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationConfirm.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="includes/codregis.php">
+
+  <table width="457" border="0">
+    <tr>
+      <td height="42" colspan="2"><h1>CUSTOMER REGISTRATION</h1></td>
+    </tr>
+    <tr>
+      <td width="227" height="42"><font color="#996633">NAME</font></td>
+      <td width="220"><span id="sprytextfield1">
+      <label for="txtname"></label>
+      <input type="text" name="txtname" id="txtname" />
+      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldMinCharsMsg">Minimum number of characters not met.</span></span></td>
+    </tr>
+    <tr>
+      <td height="49"><font color="#996633">HOUSE NAME</font></td>
+      <td><span id="sprytextfield2">
+      <label for="text10"></label>
+      <input name="txthname" type="text" id="text10" />
+      <span class="textfieldRequiredMsg">A value is required.</span></span></td>
+    </tr>
+    <tr>
+      <td height="39"><font color="#996633">STREET</font></td>
+      <td><span id="sprytextfield4">
+      <label for="text4"></label>
+      <input name="txtsree" type="text" id="text4" />
+      <span class="textfieldRequiredMsg">A value is required.</span></span></td>
+    </tr>
+    <tr>
+      <td height="34"><font color="#996633">CITY</font></td>
+      <td><span id="sprytextfield5">
+        <label for="text5"></label>
+        <input type="text" name="txtcity" id="text5" />
+      <span class="textfieldRequiredMsg">A value is required.</span></span></td>
+    </tr>
+    <tr>
+      <td height="36"><font color="#996633">PINCODE</font></td>
+      <td><span id="sprytextfield6">
+      <label for="text6"></label>
+      <input type="text" name="txtpi" id="text6" />
+      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span><span class="textfieldMinCharsMsg">Minimum number of characters not met.</span></span></td>
+    </tr>
+    <tr>
+      <td height="33"><font color="#996633">PHONE_NO</font></td>
+      <td><span id="sprytextfield7">
+      <label for="text7"></label>
+      <input type="text" name="txtphno" id="text7" />
+      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span><span class="textfieldMinCharsMsg">Minimum number of characters not met.</span></span></td>
+    </tr>
+    <tr>
+      <td height="38"><font color="#996633">EMAIL</font></td>
+      <td><span id="sprytextfield3">
+      <label for="text3"></label>
+      <input type="text" name="txtem" id="text3" />
+      <span class="textfieldRequiredMsg">A value is required.</span><span class="textfieldInvalidFormatMsg">Invalid format.</span></span></td>
+    </tr>
+    <tr>
+      <td height="38"><font color="#996633">USERNAME</font></td>
+      <td><span id="sprytextfield8">
+      <label for="text8"></label>
+      <input type="text" name="txtuser" id="text8" />
+      <span class="textfieldRequiredMsg">A value is required.</span></span></td>
+    </tr>
+    <tr>
+      <td height="30"><font color="#996633">PASSWORD</font></td>
+      <td><span id="sprypassword1">
+        <label for="txtpass"></label>
+        <input type="password" name="txtpass" id="txtpass" />
+      <span class="passwordRequiredMsg">A value is required.</span></span></td>
+    </tr>
+    <tr>
+      <td height="32"><font color="#996633">CONFIRM PASSWORD</font></td>
+      <td><span id="spryconfirm1">
+        <label for="password2"></label>
+        <input type="password" name="password2" id="password2" />
+      <span class="confirmRequiredMsg">A value is required.</span><span class="confirmInvalidMsg">The values don't match.</span></span></td>
+    </tr>
+    <tr>
+      <td height="41" colspan="2"><div align="center">
+        <input type="submit" name="Submit" id="Submit" value="Submit" />
+      </div></td>
+    </tr>
+  </table>
+</form>
+<script type="text/javascript">
+var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4", "none", {validateOn:["blur"]});
+var sprytextfield5 = new Spry.Widget.ValidationTextField("sprytextfield5", "none", {validateOn:["change"]});
+var sprytextfield6 = new Spry.Widget.ValidationTextField("sprytextfield6", "integer", {validateOn:["blur", "change"], useCharacterMasking:true, minChars:6});
+var sprytextfield7 = new Spry.Widget.ValidationTextField("sprytextfield7", "integer", {validateOn:["change"], minChars:10, useCharacterMasking:true});
+var sprytextfield8 = new Spry.Widget.ValidationTextField("sprytextfield8", "none", {validateOn:["change"]});
+var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3", "email", {useCharacterMasking:true, validateOn:["change"]});
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "none", {minChars:5, validateOn:["blur"]});
+var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "none", {validateOn:["change"]});
+var sprypassword1 = new Spry.Widget.ValidationPassword("sprypassword1", {validateOn:["change"]});
+var spryconfirm1 = new Spry.Widget.ValidationConfirm("spryconfirm1", "txtpass");
+</script>
+</body>
+</html>
